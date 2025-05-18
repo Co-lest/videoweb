@@ -6,7 +6,6 @@ export interface Testimonial {
   quote: string;
   author: string;
   position: string;
-  company: string;
   imageUrl: string;
   status: 'pending' | 'approved' | 'rejected';
   createdAt: string;

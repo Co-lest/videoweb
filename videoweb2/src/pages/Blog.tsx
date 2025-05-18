@@ -206,7 +206,7 @@ const Blog: React.FC = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-indigo-600 text-white">
+      {/* <section className="py-16 bg-indigo-600 text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
@@ -229,9 +229,10 @@ const Blog: React.FC = () => {
             </p>
           </div>
         </Container>
-      </section>
+      </section> */}
     </div>
   );
 };
 
 export default Blog;
+// no need of a newsletter

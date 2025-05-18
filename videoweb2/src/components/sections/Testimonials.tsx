@@ -7,7 +7,6 @@ interface Testimonial {
   quote: string;
   author: string;
   position: string;
-  company: string;
   imageUrl: string;
 }
 
@@ -21,24 +20,21 @@ const Testimonials: React.FC = () => {
       id: 1,
       quote: "The video production team at CreativeStudio delivered beyond our expectations. The quality and creativity they brought to our brand campaign significantly increased our engagement metrics.",
       author: "Sarah Johnson",
-      position: "Marketing Director",
-      company: "TechVision Inc.",
+      position: "Marketing Director - echVision Inc.",
       imageUrl: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
     },
     {
       id: 2,
       quote: "Their photography services are top-notch. The product shots they delivered helped us increase our conversion rate by 35% within the first month of launching our new collection.",
       author: "Michael Chen",
-      position: "E-commerce Manager",
-      company: "Luxe Lifestyle",
+      position: "E-commerce Manager - Luxe Lifestyle",
       imageUrl: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
     },
     {
       id: 3,
       quote: "The articles created by CreativeStudio's team have significantly improved our organic traffic. Their ability to craft SEO-friendly content while maintaining a compelling narrative is impressive.",
       author: "Jessica Williams",
-      position: "Digital Strategy Lead",
-      company: "Global Insights",
+      position: "Digital Strategy Lead - Global Insights",
       imageUrl: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
     }
   ];
@@ -109,7 +105,7 @@ const Testimonials: React.FC = () => {
                       <p className="text-gray-700 text-lg italic mb-6">{testimonial.quote}</p>
                       <div>
                         <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                        <p className="text-blue-600">{testimonial.position}, {testimonial.company}</p>
+                        <p className="text-blue-600">{testimonial.position}</p>
                       </div>
                     </div>
                   </div>
