@@ -11,7 +11,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: 'your-folder-name', // optional folder in Cloudinary
+    folder: 'your-folder-name', 
     allowed_formats: ['jpg', 'png', 'jpeg', 'gif'], // allowed file formats
     transformation: [{ width: 500, height: 500, crop: 'limit' }] // optional transformations
   }
