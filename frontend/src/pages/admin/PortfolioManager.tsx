@@ -32,7 +32,7 @@ const PortfolioManager: React.FC = () => {
   React.useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('http://localhost:7865/portfolio');
+        const response = await fetch('https://elkay-backend.onrender.com/portfolio');
 
         if (!response.ok) {
           throw new Error('Failed to fetch portfolio items');
@@ -120,7 +120,7 @@ const PortfolioManager: React.FC = () => {
       return;
     }
 
-    const url = "http://localhost:7865/POST/portfolio";
+    const url = "https://elkay-backend.onrender.com/POST/portfolio";
 
     try {
       const response = await fetch( url, {
@@ -163,7 +163,7 @@ const PortfolioManager: React.FC = () => {
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this portfolio item?')) {
       try {
-        const response = await fetch(`http://localhost:7865/DELETE/portfolio/${id}`, {
+        const response = await fetch(`https://elkay-backend.onrender.com/DELETE/portfolio/${id}`, {
           method: "DELETE",
           // Add headers like 'Authorization' if your API requires it
           // headers: {

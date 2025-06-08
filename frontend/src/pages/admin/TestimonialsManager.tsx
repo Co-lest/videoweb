@@ -24,8 +24,8 @@ const TestimonialsManager: React.FC = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const backendPort = 7865;
-      const url = `http://localhost:${backendPort}/`;
+      //const backendPort = 7865;
+      const url = `https://elkay-backend.onrender.com/`;
   
       try {
         setIsLoading(true);
@@ -54,8 +54,8 @@ const TestimonialsManager: React.FC = () => {
   };
 
   const updateTestimonialStatus = async (id: number, approved: boolean) => {
-    const backendPort = 7865;
-    const url = `http://localhost:${backendPort}/${id}/approve`; 
+    // const backendPort = 7865;
+    const url = `https://elkay-backend.onrender.com/${id}/approve`; 
     try {
       const response = await fetch(url, {
         method: 'PATCH',
@@ -79,7 +79,7 @@ const TestimonialsManager: React.FC = () => {
 
   const deleteTestimonial = async (id: number) => {
     const backendPort = 7865;
-    const url = `http://localhost:${backendPort}/DELETE/testimonial/${id}`;
+    const url = `https://elkay-backend.onrender.com/DELETE/testimonial/${id}`;
     try {
       const response = await fetch(url, {
         method: 'DELETE',

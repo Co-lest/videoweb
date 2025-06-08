@@ -23,7 +23,7 @@ const Testimonials: React.FC = () => {
   useEffect(() => {
     const getData = async () => {
       //const backendPort = 7865;
-      const url = `https://videoweb-eight.vercel.app/`;
+      const url = `https://elkay-backend.onrender.com`;
   
       try {
         setIsLoading(true);

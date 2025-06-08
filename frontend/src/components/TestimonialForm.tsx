@@ -21,8 +21,8 @@ const TestimonialForm: React.FC = () => {
     author: "",
     position: "",
     imageUrl: ""
-  }); //https://res.cloudinary.com/djzgpzcio/image/upload/v1748431136/m8blfaktwhepdrvk6gnm.png
-  
+  });
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +55,7 @@ const TestimonialForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/djzgpzcio/image/upload`,{
+        `https://api.cloudinary.com/v1_1/djzgpzcio/image/upload`, {
           method: 'POST',
           body: formData,
         }
@@ -91,7 +91,7 @@ const TestimonialForm: React.FC = () => {
     }
 
     try {
-      const response = await fetch("https://videoweb-eight.vercel.app/POST/testimony", {
+      const response = await fetch("https://elkay-backend.onrender.com/POST/testimony", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

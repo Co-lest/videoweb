@@ -27,7 +27,7 @@ const Portfolio: React.FC = () => {
         setErrorDisplay(null);
         setIsLoading(true);   
 
-        let response = await fetch("https://videoweb-eight.vercel.app/");
+        let response = await fetch("https://elkay-backend.onrender.com/portfolio");
 
         if (!response.ok) {
           const errorText = await response.text(); 

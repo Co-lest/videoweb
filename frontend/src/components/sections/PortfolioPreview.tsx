@@ -26,7 +26,7 @@ const PortfolioPreview: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch('https://videoweb-eight.vercel.app/portfolio');
+        const response = await fetch('https://elkay-backend.onrender.com/portfolio');
         if (!response.ok) {
           throw new Error('Failed to fetch portfolio items');
         }

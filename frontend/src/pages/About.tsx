@@ -160,7 +160,7 @@ const About: React.FC = () => {
         </Container>
       </section>
 
-      <section className="py-24 bg-blue-600 text-white">
+      {/* <section className="py-24 bg-blue-600 text-white">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
@@ -181,7 +181,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
     </div>
   );
 };
