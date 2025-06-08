@@ -22,8 +22,8 @@ const Testimonials: React.FC = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const backendPort = 7865;
-      const url = `http://localhost:${backendPort}/`;
+      //const backendPort = 7865;
+      const url = `hhttps://videoweb-eight.vercel.app/`;
   
       try {
         setIsLoading(true);
