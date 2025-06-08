@@ -16,7 +16,7 @@ const port = process.env.PORT || 5687;
 app.use(express.json());
 
 app.use(cors({ // process.env.FRONTEND_PORT
-  origin: 'http://localhost:5173' 
+  origin: process.env.FRONTEND_PORT
 }));
 
 app.get("/", handleRoot);
