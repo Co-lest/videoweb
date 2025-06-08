@@ -27,7 +27,7 @@ const Portfolio: React.FC = () => {
         setErrorDisplay(null);
         setIsLoading(true);   
 
-        let response = await fetch("http://localhost:7865/portfolio");
+        let response = await fetch("https://videoweb-eight.vercel.app/");
 
         if (!response.ok) {
           const errorText = await response.text(); 

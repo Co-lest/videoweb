@@ -15,7 +15,7 @@ const port = process.env.PORT || 5687;
 
 app.use(express.json());
 
-app.use(cors({ // process.env.FRONTEND_PORT
+app.use(cors({
   origin: process.env.FRONTEND_PORT
 }));
 
@@ -31,8 +31,6 @@ app.delete("/DELETE/portfolio/:id", handleDeletePort);
 app.delete("/DELETE/testimonial/:id", handleDeleteTest);
 
 app.post("/POST/send", Hero); // testing connectivity of apis not working
-
-
 
 app.listen(port, () => {
     console.log("App listening on port: ", port);
