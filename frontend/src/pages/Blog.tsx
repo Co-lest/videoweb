@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Search } from 'lucide-react';
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; 
+import { Search } from 'lucide-react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 
@@ -26,11 +27,14 @@ const Blog: React.FC = () => {
     (async () => {
       try {
         const response = await fetch("https://elkay-backend.onrender.com/portfolio");
+
         if (!response.ok) {
           throw new Error("Failed to fetch posts. Please check your connection.");
         }
         const data = await response.json();
-        setAllPosts(data.data || []);
+        const articles = data.data.filter((post: BlogPost) => post.category === 'article');
+        setAllPosts(articles);
+
       } catch (error) {
         setErrorMessage("An error occurred while fetching blog items.");
       } finally {
@@ -103,29 +107,27 @@ const Blog: React.FC = () => {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={post.thumbnailUrl}
-                        alt={post.title} 
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center mb-3">
-                        <span className="inline-block px-3 py-1 text-xs font-medium uppercase tracking-wider text-indigo-600 bg-indigo-100 rounded-full">
-                          {post.category}
-                        </span>
-                        <span className="ml-auto text-sm text-gray-500">{post.createdAt.getDate()}, {post.createdAt.getMonth()}, {post.createdAt.getFullYear()}</span>
+                  <article key={post._id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <Link to={post.link} target="_blank" rel="noopener noreferrer">
+                      <div className="h-48 overflow-hidden">
+                        <img 
+                          src={post.thumbnailUrl}
+                          alt={post.title} 
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
                       </div>
-                      <h2 className="text-xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors">
-                        <Link to={`/blog/${post.id}`}>{post.title}</Link>
-                      </h2>
-                      <p className="text-gray-600 mb-4">{post.description}</p>
-                      <Link to={`/blog/${post.id}`} className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700 transition-colors mt-4">
-                        Read more <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
-                    </div>
+                      <div className="p-6">
+                        <div className="flex items-center mb-3">
+                          <span className="inline-block px-3 py-1 text-xs font-medium uppercase tracking-wider text-indigo-600 bg-indigo-100 rounded-full">
+                            {post.category}
+                          </span>
+                        </div>
+                        <h2 className="text-xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors">
+                          {post.title}
+                        </h2>
+                        <p className="text-gray-600 mb-4">{post.description}</p>
+                      </div>
+                    </Link>
                   </article>
                 ))}
               </div>
