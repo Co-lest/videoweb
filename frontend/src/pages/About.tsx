@@ -1,6 +1,8 @@
 import React from 'react';
 import { Award, Users, Target, Clock } from 'lucide-react';
 import Container from '../components/ui/Container';
+import luca from "../../public/IMG-20250319-WA0039.jpg";
+import mark from "../../public/WhatsApp Image 2025-06-09 at 9.53.59 AM.jpeg"
 
 interface TeamMember {
   name: string;
@@ -12,28 +14,16 @@ interface TeamMember {
 const About: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
-      name: 'Alex Morgan',
-      role: 'Creative Director',
-      bio: 'With over 15 years of experience in visual storytelling, Alex leads our creative team with a passion for innovative content that drives results.',
-      imageUrl: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg'
+      name: 'Lucas Kimeu',
+      role: 'Creator - Elkay Cinematics',
+      bio: 'With years of experience in visual storytelling, Lucas leads our creative team with a passion for innovative content that drives results. Sh specializes in commercial and editorial photography.',
+      imageUrl: luca
     },
     {
-      name: 'Sarah Chen',
-      role: 'Lead Photographer',
-      bio: 'Sarah\'s award-winning photography has been featured in major publications. She specializes in commercial and editorial photography.',
-      imageUrl: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg'
-    },
-    {
-      name: 'Marcus Johnson',
-      role: 'Video Production Manager',
-      bio: 'Marcus brings his cinematic vision to our video projects, with extensive experience in commercial and documentary filmmaking.',
-      imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'
-    },
-    {
-      name: 'Emma Rodriguez',
-      role: 'Senior Content Writer',
-      bio: 'Emma crafts compelling narratives that engage audiences. Her background in journalism brings depth and authority to our written content.',
-      imageUrl: 'https://images.pexels.com/photos/732425/pexels-photo-732425.jpeg'
+      name: 'Mark Tom',
+      role: 'Software  developer',
+      bio: 'Through countless hours of brainstorming, designing, coding, and refining, our team worked hand-in-hand to breathe life into this website, each contribution a reflection of shared passion, skill, and purpose.',
+      imageUrl: mark
     }
   ];
 
@@ -139,9 +129,9 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden group">
+              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden group w-full max-w-md">
                 <div className="relative h-80 overflow-hidden">
                   <img 
                     src={member.imageUrl} 

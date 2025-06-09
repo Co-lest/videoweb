@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         setTimeout(() => {
           el.style.opacity = '1';
           el.style.transform = 'translateY(0)';
-        }, 300 * index);
+        }, 400 * index);
       }
     });
   }, []);

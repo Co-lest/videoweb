@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Camera, Video, PenTool, Instagram, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Camera, Video, PenTool, Instagram, Twitter, Mail, Phone, MapPin, Youtube} from 'lucide-react';
 import Container from '../ui/Container';
 
 const Footer: React.FC = () => {
@@ -21,14 +21,14 @@ const Footer: React.FC = () => {
               We transform ideas into compelling visual and written content for businesses and individuals.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/just_lucas5?igsh=emtkNXNyZWE3N3Yx" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
+              <a href="https://youtube.com/@elkaycinematics?si=YZSuGRRoZkO3xA9A" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                <Youtube className="h-5 w-5" />
               </a>
-              <a href="https://facebook.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
+              <a href="https://x.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
