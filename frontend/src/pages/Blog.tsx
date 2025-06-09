@@ -5,12 +5,14 @@ import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 
 interface BlogPost {
+  _id: string;
   id: number;
   title: string;
   category: string;
   description: string;
   thumbnailUrl: string;
-  readTime: string;
+  link: string;
+  createdAt: Date;
 }
 
 const Blog: React.FC = () => {
@@ -114,7 +116,7 @@ const Blog: React.FC = () => {
                         <span className="inline-block px-3 py-1 text-xs font-medium uppercase tracking-wider text-indigo-600 bg-indigo-100 rounded-full">
                           {post.category}
                         </span>
-                        <span className="ml-auto text-sm text-gray-500">{post.readTime}</span>
+                        <span className="ml-auto text-sm text-gray-500">{post.createdAt.getDate()}, {post.createdAt.getMonth()}, {post.createdAt.getFullYear()}</span>
                       </div>
                       <h2 className="text-xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors">
                         <Link to={`/blog/${post.id}`}>{post.title}</Link>
